@@ -1,0 +1,149 @@
+.fl {
+    float: left;
+}
+
+/*body {*/
+    /*height: 2010px;*/
+/*}*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sy-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    line-height:70px;
+    width: 100%;
+    z-index: 1;
+    /*background: #4154DE;*/
+    opacity: 1;
+}
+
+.sy-header2 {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background: #4154DE;
+    opacity: 1;
+}
+
+.sy-header .sy-logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    margin: auto 0;
+    width: 116px;
+    height: 31px;
+}
+
+.sy-header .sy-nav {
+    position: absolute;
+    left: 210px;
+    margin: auto 0;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 700px;
+    list-style: none;
+    clear: both;
+}
+
+.sy-header .sy-nav .sy-nav-bg {
+    position: absolute;
+    top: 15px;
+    left:357px;
+}
+
+.sy-header .sy-nav .sy-nav-bg .sy-nav-bg-center {
+    width: 40px;
+    height: 34px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.sy-header .sy-nav li {
+    position: relative;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Helvetica", "Arial", serif;
+    padding: 0 17px;
+}
+
+.sy-header .sy-share {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 140px;
+    margin: auto 0;
+    height: 26px;
+    line-height: 34px;
+    text-align: right;
+}
+
+.sy-header .sy-share .sy-icon img {
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.rotateDiv {
+    transform: rotate(360deg);
+}
+
+
+
+.sy-header .sy-wechat {
+    width: 125px;
+    height: 126px;
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 106px;
+    background-color: white;
+    padding: 18px 10px;
+}
+
+.sy-header .sy-wechat .wechat-top {
+    position: absolute;
+    top: -18px;
+    right: 18px;
+    width: 125px;
+    height: 18px;
+    background: url("../images/header_pointer.png") no-repeat;
+}
+
+.sy-header .sy-share .sy-icon {
+    float: left;
+    margin-left: 5px;
+}
+
+.sy-header .sy-blog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 28px;
+    margin: auto 0;
+    line-height: 34px;
+    cursor: pointer;
+    width: 92px;
+    height: 36px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background: url(../images/nav-quan2.png) center center no-repeat;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>冰艺</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="shortcut icon" href="favicon.gif"/>
+<style>
+body,  div,  p { margin: 0; padding: 0;}
+ul { list-style: none;}
+html { overflow: hidden;}
+body { width: 100%;  *cursor: default;
+overflow: hidden; font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;}
+#pageContain { overflow: hidden;}
+.page { display: none; width: 100%; height: 100%; overflow: hidden; position: absolute; top: 0; left: 0;}
+.contain { width: 100%; height: 100%; display: none; position: relative; z-index: 0;}
+.current .contain, .slide .contain { display: block;}
+.current { display: block; z-index: 1;}
+.slide { display: block; z-index: 2;}
+.swipe { display: block; z-index: 3; transition-duration: 0ms !important; -webkit-transition-duration: 0ms !important;}
+.page1 { background: #37c1e3;}
+.page2 { background: #009922;}
+.page3 { background: #992211;}
+#navBar { z-index: 3; position: absolute; top: 40%; right: 3%;
+	color: yellow;}
+#navBar .active { background: #ccc;}
+#navBar li { cursor: pointer; margin-bottom: 10px; transition: all .7s ease; border-radius: 50%; line-height: 40px; text-align: center; width: 40px; height: 40px;}
+
+/*.txt { margin-top: 20%; font-size: 50px; color: #fff; text-align: center;}*/
+</style>
+</head>
+
+<body>
+<div id="pageContain">
+	<div class="page page1 current">
+		<div class="contain">
+			<div class="sy-header" id="sy-header">
+				<div class="sy-header2" id="sy-header2"></div>
+				<a href="#">
+					<img class="sy-logo" src="images/logo.png"/>
+				</a>
+				<ul class="sy-nav" id="sy-nav">
+					<div class="sy-nav-bg" id="sy-nav-bg">
+						<img class="sy-nav-bg-left fl" src="images/left-nav.png" alt=""/>
+						<div id="sy-nav-bg-center" class="sy-nav-bg-center fl"></div>
+						<img class="sy-nav-bg-right fl" src="images/right-nav.png" alt=""/>
+					</div>
+					<a href="#">
+						<li class="lis1">HOME</li>
+					</a>
+					<a href="case/case.html">
+						<li class="lis2">CASE</li>
+					</a>
+					<a href="about us/about us.html">
+						<li class="lis3">ABOUT US</li>
+					</a>
+					<a href="contact/contact.html">
+						<li class="lis4">CONTACT</li>
+					</a>
+					<a href="mall/mall.html">
+						<li class="lis5">MALL</li>
+					</a>
+				</ul>
+				<div class="sy-share">
+					<div class="sy-icon" id="icon-1">
+						<img id="zone" class="i" src="images/i1_2.png" alt=""/>
+					</div>
+					<div class="icon sy-icon" id="icon-2">
+						<img id="mes" class="i" src="images/i2_2.png" alt=""/>
+					</div>
+					<div class="sy-icon" id="icon-3">
+						<img id="microblog" class="i" src="images/i3_2.png" alt=""/>
+					</div>
+				</div>
+				<div class="sy-wechat" id="wechat">
+					<img src="images/code.jpg" alt=""/>
+
+					<div class="wechat-top"></div>
+				</div>
+				<a href="#">
+					<span class="sy-blog">IBLOG</span>
+				</a>
+			</div>
+			<!--sy-header-end-->
+			<!--sy-main-1-start-->
+			<div class="sy-main-1">
+				<!--<ul class="sy-pointer" id="pointer">-->
+				<!--<li class="sy-p1" id="sy-p1"></li>-->
+				<!--<li class="sy-p2" id="sy-p2"></li>-->
+				<!--<li class="sy-p3" id="sy-p3"></li>-->
+				<!--</ul>-->
+				<div class="LOGO" id="LOGO">
+					<img class="logo-top" id="logo1" src="images/logo_1.png" alt=""/>
+					<img class="logoBig" id="logoBig" src="images/logo-quan.png" alt=""/>
+				</div>
+				<img class="logoShadow" id="logoShadow" src="images/logo-shadow.png" alt=""/>
+			</div>
+		</div>
+	</div>
+
+	<div class="page page2">
+		<div class="contain">
+			<div class="sy-main-2" id="sy-main-2">
+				<ul class="lunBO" id="lunBO">
+					<li><img id="lunBoImg" src="images/player2.jpg"/></li>
+					<li><img src="images/player1.jpg"/></li>
+					<li><img src="images/player3.jpg"/></li>
+					<li><img src="images/player4.jpg"/></li>
+				</ul>
+				<div class="sy-content">
+					<div class="child">
+						<div class="child-icon child-icon1">
+							<a href="#"><img src="images/i1.png" alt=""/></a>
+						</div>
+					</div>
+					<div class="child">
+						<a href="#">
+							<div class="child-icon2"></div>
+						</a>
+					</div>
+					<div class="child">
+						<div class="child-icon3">
+							<a href="#"><img src="images/i3.png" alt=""/></a>
+						</div>
+					</div>
+					<div class="child">
+						<a href="#">
+							<div class="child-icon4"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page page3">
+		<div class="contain">
+			<div class="sy-main-3">
+				<div class="show">
+					<audio src="sick at heart.mp3" autoplay controls loop="loop">
+					</audio>
+					<div class="scene">
+						<ul>
+							<li><img src="images/bg2.jpg"/></li>
+							<li><img src="images/bg1.jpg"/></li>
+							<li><img src="images/bg3.jpg"/></li>
+							<li><img src="images/bg4.jpg"/></li>
+							<li><img src="images/bg5.jpg"/></li>
+							<li><img src="images/bg6.jpg"/></li>
+						</ul>
+					</div>
+				</div>
+				<div id="div1">
+					<a href="#" target="_blank">demo</a>
+					<a href="#" target="_blank">demo</a>
+					<a href="#" target="_blank">demo</a>
+					<a href="#" target="_blank">demo</a>
+					<a href="#" target="_blank">demo</a>
+					<a href="#" target="_blank">demo</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<ul id="navBar">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+
+<script src="js/fullPage.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/screenSlither.js"></script>
+<script src="js/AniMate.js"></script>
+<script>
+	var flag = true;
+	var navBg = document.getElementById("sy-nav-bg");
+	var header = document.getElementById("sy-header");
+	var header2 = document.getElementById("sy-header2");
+	var ul = document.getElementById("sy-nav");
+	var lis = ul.getElementsByTagName("li");
+	var navBgC = document.getElementById("sy-nav-bg-center");
+	var zone = document.getElementById("zone");
+	var mes = document.getElementById("mes");
+	var wechat = document.getElementById("wechat");
+	var microblog = document.getElementById("microblog");
+	var icon1 = document.getElementById("icon-1");
+	var icon2 = document.getElementById("icon-2");
+	var icon3 = document.getElementById("icon-3");
+	var LOGO = document.getElementById("LOGO");
+	var logoShadow = document.getElementById("logoShadow");
+	var logo1 = document.getElementById("logo1");
+	var img2 = document.getElementById("img-2");
+	var lunBO = document.getElementById("lunBO");
+	var lunBoImg = document.getElementById("lunBoImg");
+	var main2 = document.getElementById("sy-main-2");
+	var content = main2.children[1];
+	var bgs = content.children;
+	var imgLeft = 0;
+	var timer = null;
+
+	for (var i = 0; i < lis.length; i++) {
+		lis[i].onmouseover = function () {
+			var target = this.offsetLeft;
+			var wd = this.offsetWidth - 34;
+			AniMate(navBg, {"left": target}, 15);
+			AniMate(navBgC, {"width": wd})
+		};
+		lis[i].onmouseout = function () {
+			AniMate(navBg, {"left": 0}, 15);
+			AniMate(navBgC, {"width": 42}, 15)
+		};
+	}
+	mes.onmouseover = function () {
+		wechat.style.display = "block";
+	};
+	mes.onmouseout = function () {
+		wechat.style.display = "none";
+	};
+	window.onload = function () {
+			AniMate(LOGO, {"top": 0}, 40);
+			AniMate(logoShadow, {"opacity": 1}, 40, function () {
+				AniMate(logo1, {"opacity": 1}, 40, function () {
+					AniMate(header, {"opacity": 1}, 10)
+				});
+			});
+		var oDiv=document.getElementById('div1');
+		var aA=document.getElementsByTagName('a');
+		var i=0;
+		for(i=0;i<aA.length;i++)
+		{
+			aA[i].pause=1;
+			aA[i].time=null;
+			initialize(aA[i]);
+			aA[i].onmouseover=function()
+			{
+				this.pause=0;
+			};
+			aA[i].onmouseout=function()
+			{
+				this.pause=1;
+			};
+		}
+		setInterval(starmove,24);
+		function starmove()
+		{
+			for(i=0;i<aA.length;i++)
+			{
+				if(aA[i].pause)
+				{
+					domove(aA[i]);
+				}
+			}
+		}
+		function domove(obj)
+		{
+			if(obj.offsetTop<=-obj.offsetHeight)
+			{
+				obj.style.top=oDiv.offsetHeight+"px";
+				initialize(obj);
+			}
+			else
+			{
+				obj.style.top=obj.offsetTop-obj.ispeed+"px";
+			}
+		}
+		function initialize(obj)
+		{
+			var iLeft=parseInt(Math.random()*oDiv.offsetWidth);
+			var scale=Math.random()*1+1;
+			var iTimer=parseInt(Math.random()*1500);
+			obj.pause=0;
+
+			obj.style.fontSize=12*scale+'px';
+
+			if((iLeft-obj.offsetWidth)>0)
+			{
+				obj.style.left=iLeft-obj.offsetWidth+"px";
+			}
+			else
+			{
+				obj.style.left=iLeft+"px";
+			}
+			clearTimeout(obj.time);
+			obj.time=setTimeout(function(){
+				obj.pause=1;
+			},iTimer);
+			obj.ispeed=Math.ceil(Math.random()*4)+1;
+		}
+		};
+
+	for (var i = 0; i < bgs.length; i++) {
+		bgs[i].index = i;
+		bgs[i].onmouseover = function () {
+			var target = -this.index * 1349;
+			AniMate(lunBO, {"left": target}, 50);
+		};
+	}
+
+	$(function () {
+		$("img").on("mouseover", function () {
+			$(this).toggleClass("rotateDiv");
+		})
+	});
+	$(function () {
+		$("img").on("mouseout", function () {
+			$(this).toggleClass("rotateDiv");
+		})
+	});
+	function scroll() {
+		return {
+			top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+			left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+		};
+	}
+var runPage;
+runPage = new FullPage({
+	id: 'pageContain',
+	slideTime: 800,
+	effect: {
+		transform: {
+			translate: 'Y',
+			scale: [0, 1],
+			rotate: [0, 360]
+		},
+		opacity: [0, 1]
+	},
+	mode: 'wheel, touch, nav:navBar',
+	easing: 'ease'
+});
+
+</script>
+
+</body>
+</html>

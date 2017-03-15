@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰艺</title>
+    <link rel="stylesheet" href="css/base.css">
+	<link rel="shortcut icon" href="../favicon.gif"/>
+    <style>
+        video{
+            min-width: 100%;
+            min-height: 100%;
+            position:fixed;
+            right:0;
+            bottom:0;
+            width: auto;
+            height: auto;
+            z-index: -99;
+        }
+    </style>
+</head>
+<body>
+<!--导航栏开始-->
+<div class="sy-header" id="sy-header">
+    <div class="sy-header2" id="sy-header2"></div>
+    <a href="#">
+        <img class="sy-logo" src="images/logo.png"/>
+    </a>
+    <ul class="sy-nav" id="sy-nav">
+        <div class="sy-nav-bg" id="sy-nav-bg">
+            <img class="sy-nav-bg-left fl" src="images/left-nav.png" alt=""/>
+
+            <div id="sy-nav-bg-center" class="sy-nav-bg-center fl"></div>
+            <img class="sy-nav-bg-right fl" src="images/right-nav.png" alt=""/>
+        </div>
+        <a href="../home.html">
+            <li class="lis1">HOME</li>
+        </a>
+            <a href="../case/case.html">
+                <li class="lis2">CASE</li>
+            </a>
+            <a href="../about%20us/about%20us.html">
+                <li class="lis3">ABOUT US</li>
+            </a>
+            <a href="../contact/contact.html">
+                <li class="lis4">CONTACT</li>
+            </a>
+            <a href="#">
+                <li class="lis5">MALL</li>
+        </a>
+    </ul>
+    <div class="sy-share">
+        <div class="sy-icon" id="icon-1">
+            <img id="zone" class="i" src="images/i1_2.png" alt=""/>
+        </div>
+        <div class="icon sy-icon" id="icon-2">
+            <img id="mes" class="i" src="images/i2_2.png" alt=""/>
+        </div>
+        <div class="sy-icon" id="icon-3">
+            <img id="microblog" class="i" src="images/i3_2.png" alt=""/>
+        </div>
+    </div>
+    <div class="sy-wechat" id="wechat">
+        <img src="images/code.jpg" alt=""/>
+
+        <div class="wechat-top"></div>
+    </div>
+    <a href="#">
+        <span class="sy-blog">IBLOG</span>
+    </a>
+</div>
+<!--导航栏结束-->
+<video src="haidao.mp4" controls="controls"
+       autoplay="autoplay"    style="width: 100%" preload="preload"></video>
+<script src="../contact/js/jquery-3.1.1.min.js"></script>
+<script src="../contact/js/AniMate.js"></script>
+<script>
+    var navBg = document.getElementById("sy-nav-bg");
+    var ul = document.getElementById("sy-nav");
+    var lis = ul.getElementsByTagName("li");
+    var navBgC = document.getElementById("sy-nav-bg-center");
+    var wechat = document.getElementById("wechat");
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            var target = this.offsetLeft;
+            var wd = this.offsetWidth - 34;
+            AniMate(navBg, {"left": target}, 15);
+            AniMate(navBgC, {"width": wd})
+        };
+        lis[i].onmouseout = function () {
+            AniMate(navBg, {"left": 357}, 15);
+            AniMate(navBgC, {"width": 40}, 15)
+        };
+    }
+    mes.onmouseover = function () {
+        wechat.style.display = "block";
+    };
+    mes.onmouseout = function () {
+        wechat.style.display = "none";
+    };
+    $(function () {
+        $("img").on("mouseover", function () {
+            $(this).toggleClass("rotateDiv");
+        })
+    })
+    $(function () {
+        $("img").on("mouseout", function () {
+            $(this).toggleClass("rotateDiv");
+        })
+    })
+
+</script>
+</body>
+</html>
